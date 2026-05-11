@@ -23,10 +23,13 @@ Connect to the remote Linux server and locate the hidden flag file.
 ```bash
 ssh student@[TARGET-IP] -p 30003
 ```
+![Screenshot 3](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165250.png)
 
 ---
 
 ## SSH Warning Fix
+
+![Screenshot 8](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20163803.png)
 
 While connecting, the following error appeared:
 
@@ -44,6 +47,8 @@ ssh-keygen -f "/home/YOUR-USERNAME/.ssh/known_hosts" -R "[TARGET-IP]:30003"
 ```
 
 Reconnect again:
+
+![Screenshot 7](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20163829.png)
 
 ```bash
 ssh student@[TARGET-IP] -p 30003
@@ -71,6 +76,8 @@ password123
 
 ## Initial Enumeration
 
+![Screenshot 5](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164134.png)
+
 After logging in:
 
 ```bash
@@ -81,6 +88,8 @@ ls -la
 
 Example output:
 
+![Screenshot 1](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165706.png)
+
 ```text
 student
 /home/student
@@ -89,6 +98,9 @@ student
 ---
 
 ## Find the Flag
+
+![Screenshot 2](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165503.png)
+
 
 Search the filesystem for files containing the word "flag":
 
@@ -139,6 +151,7 @@ ls -la /opt/it-staff/.confidential
 ```bash
 cat /opt/it-staff/.confidential/.flag.txt
 ```
+![Screenshot 6](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164033.png)
 
 Flag successfully retrieved ✅
 

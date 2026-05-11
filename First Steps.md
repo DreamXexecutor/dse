@@ -1,20 +1,6 @@
 # SSH Connection Walkthrough
 
-![Screenshot 1](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165706.png)
-
-![Screenshot 2](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165503.png)
-
-![Screenshot 3](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165250.png)
-
 ![Screenshot 4](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164814.png)
-
-![Screenshot 5](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164134.png)
-
-![Screenshot 6](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164033.png)
-
-![Screenshot 7](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20163829.png)
-
-![Screenshot 8](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20163803.png)
 
 ---
 

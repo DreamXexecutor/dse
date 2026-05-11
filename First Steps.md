@@ -1,3 +1,7 @@
+# SSH Connection
+
+![SSH Warning](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20163803.png)
+
 ````md
 # whoamilab - Start Walkthrough
 

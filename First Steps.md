@@ -76,8 +76,6 @@ password123
 
 ## Initial Enumeration
 
-![Screenshot 5](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164134.png)
-
 After logging in:
 
 ```bash
@@ -88,7 +86,7 @@ ls -la
 
 Example output:
 
-![Screenshot 1](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165706.png)
+![Screenshot 5](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164134.png)
 
 ```text
 student
@@ -99,7 +97,7 @@ student
 
 ## Find the Flag
 
-![Screenshot 2](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165503.png)
+![Screenshot 1](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165706.png)
 
 
 Search the filesystem for files containing the word "flag":
@@ -113,6 +111,7 @@ Discovered file:
 ```text
 /opt/it-staff/.confidential/.flag.txt
 ```
+![Screenshot 2](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165503.png)
 
 ---
 
@@ -151,6 +150,7 @@ ls -la /opt/it-staff/.confidential
 ```bash
 cat /opt/it-staff/.confidential/.flag.txt
 ```
+
 ![Screenshot 6](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164033.png)
 
 Flag successfully retrieved ✅

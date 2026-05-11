@@ -1,32 +1,46 @@
-# SSH Connection
+# SSH Connection Walkthrough
 
-![SSH Warning](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20163803.png)
+![Screenshot 1](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165706.png)
 
-````md
-# whoamilab - Start Walkthrough
+![Screenshot 2](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165503.png)
 
-Beginner SSH enumeration challenge.
+![Screenshot 3](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20165250.png)
 
-Difficulty: ★☆☆☆☆  
+![Screenshot 4](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164814.png)
+
+![Screenshot 5](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164134.png)
+
+![Screenshot 6](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20164033.png)
+
+![Screenshot 7](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20163829.png)
+
+![Screenshot 8](https://raw.githubusercontent.com/DreamXexecutor/dse/main/Screenshot%202026-05-11%20163803.png)
+
+---
+
+# whoamilab — Start Walkthrough
+
+**Beginner SSH enumeration challenge**
+Difficulty: ★☆☆☆☆
 Category: SSH / Linux Enumeration
 
 ---
 
-# Objective
+## Objective
 
 Connect to the remote Linux server and locate the hidden flag file.
 
 ---
 
-# Connect to the Server
+## Connect to the Server
 
 ```bash
 ssh student@[TARGET-IP] -p 30003
-````
+```
 
 ---
 
-# SSH Warning Fix
+## SSH Warning Fix
 
 While connecting, the following error appeared:
 
@@ -35,9 +49,9 @@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!
 Host key verification failed.
 ```
 
-This happens when an old SSH fingerprint is saved locally.
+This happens when an old SSH fingerprint is already saved locally.
 
-Remove the outdated key:
+Remove the outdated SSH key:
 
 ```bash
 ssh-keygen -f "/home/YOUR-USERNAME/.ssh/known_hosts" -R "[TARGET-IP]:30003"
@@ -69,7 +83,7 @@ password123
 
 ---
 
-# Initial Enumeration
+## Initial Enumeration
 
 After logging in:
 
@@ -88,9 +102,9 @@ student
 
 ---
 
-# Find the Flag
+## Find the Flag
 
-Search the filesystem for files containing "flag":
+Search the filesystem for files containing the word "flag":
 
 ```bash
 find / -iname "*flag*" 2>/dev/null
@@ -104,7 +118,7 @@ Discovered file:
 
 ---
 
-# Common Mistake
+## Common Mistake
 
 Trying to execute the file directly:
 
@@ -118,11 +132,11 @@ Result:
 Permission denied
 ```
 
-The file must be read using `cat`.
+The file is a text file and should be read using `cat`.
 
 ---
 
-# Enumerate Permissions
+## Enumerate Permissions
 
 Check directory permissions:
 
@@ -134,25 +148,25 @@ ls -la /opt/it-staff/.confidential
 
 ---
 
-# Read the Flag
+## Read the Flag
 
 ```bash
 cat /opt/it-staff/.confidential/.flag.txt
 ```
 
-Flag successfully retrieved.
+Flag successfully retrieved ✅
 
 ---
 
-# Optional Enumeration
+## Optional Enumeration
 
-Check sudo privileges:
+### Check sudo privileges
 
 ```bash
 sudo -l
 ```
 
-Check SUID binaries:
+### Check SUID binaries
 
 ```bash
 find / -perm -4000 2>/dev/null
@@ -160,13 +174,10 @@ find / -perm -4000 2>/dev/null
 
 ---
 
-# Final Notes
+## Final Notes
 
 * Always use `cat` to read text files.
 * Hidden directories often contain sensitive information.
-* Basic Linux enumeration is important in CTF challenges.
+* Basic Linux enumeration skills are essential in CTF challenges.
 
-Happy Hacking :)
-
-```
-```
+Happy Hacking 🚀
